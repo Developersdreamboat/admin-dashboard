@@ -5,17 +5,19 @@
 
 :root {
   --sidebar-logo-width: 3rem;
+  --header-buttons-size: 1.5rem;
 }
 
-body {
+body {  
+  min-height: 100vh;
+  height: 100%;
   font-family: Roboto, sans-serif;
   display: grid;
-  grid-template-columns: 1fr 2.25fr 1.5fr;
-  grid-template-rows: 1fr 1fr 8fr;
+  grid-template-columns: min(1fr, 20%) min(4fr, 80%);
+  grid-template-rows: min(1fr, 17%) min(5fr, 83%);
 }
 
 /* test -- delete later */
-.header > img,
 .main-content > img {
   width: 50px;
 }
@@ -27,7 +29,7 @@ body {
   background-color: #1199e1;
   font-weight: 600;
   grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  grid-row: 1 / 3;
 }
 
 .logo {
@@ -66,12 +68,108 @@ body {
 
 /* header */
 .header {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
+  padding: 1.5% 3%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+div.upper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.lower-header {
+  padding: 1% 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#search {
+  background: url('../img/search.png') no-repeat;
+  border: none;
+  width: var(--header-buttons-size);
+  height: var(--header-buttons-size);
+}
+
+input#search-field {
+  padding: .5rem;
+  width: 45rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #e3e5e8;
+  flex: 1;
+}
+
+div.corner-functions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+#notifications {
+  background: url('../img/notifications.png') no-repeat;  
+  border: none;
+  width: var(--header-buttons-size);
+  height: var(--header-buttons-size);
+
+}
+
+img#user-pic-small {
+  width: 3rem;
+}
+
+div.greeting-container {
+  display: flex;
+  gap: 1rem;
+}
+
+img#user-pic-big {
+  width: 10%;
+}
+
+div.greeting {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .25rem;
+}
+
+.greeting > span:first-child {
+  font-size: .75rem;
+}
+
+div.lower-buttons-container {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+button.lower-buttons {
+  background-color: #1199e1;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  height: 2.25rem;
+  width: 5.5rem;
+}
+
+.header img {
+  border-radius: 50%;
 }
 
 /* main-content */
 .main-content {
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
