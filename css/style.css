@@ -197,17 +197,19 @@ div.project {
 
 .projects-area {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(15rem, 1fr));
+  grid-template-rows: repeat(3, minmax(11rem, 1fr));
+  gap: 1.5rem 1rem;
 }
 
 .announcements {
+  padding: 1rem;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
 
 .trendings {
+  padding: 1rem;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
@@ -251,6 +253,55 @@ button.fork {
   height: var(--icon-buttons-size);
 }
 
-.main-content img {
-  width: 32px;
+.announcements-area {
+  background-color: #ffffff;
+  border-radius: .5rem;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+div.announcement {
+  padding: 1rem;
+  border-bottom: .1rem solid grey;
+}
+
+span.announcement-title {
+  font-size: .9rem;
+  font-weight: 600; 
+}
+
+p.announcement-desc {
+  color: #787777;
+  font-size: .75rem;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.trendings-area {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: .5rem;
+}
+
+div.trending {
+  margin: .25rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+div.trending-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.trendings img {
+  border-radius: 50%;
+  width: 3rem;
+}
+
+span.project-name {
+  color: #787777;
 }
