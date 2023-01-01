@@ -5,7 +5,7 @@
 
 :root {
   --sidebar-logo-width: 3rem;
-  --header-buttons-size: 1.5rem;
+  --icon-buttons-size: 1.5rem;
 }
 
 body {  
@@ -24,7 +24,7 @@ body {
 
 .sidebar {
   min-width: min-content;
-  padding: 5%;
+  padding: .75rem;
   color: #ffffff;
   background-color: #1199e1;
   font-weight: 600;
@@ -68,7 +68,7 @@ body {
 
 /* header */
 .header {
-  padding: 1.5% 3%;
+  padding: .75rem 1.5rem;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
@@ -80,7 +80,7 @@ div.upper-header {
 }
 
 div.lower-header {
-  padding: 1% 0;
+  padding: .5rem 0;
   display: flex;
   justify-content: space-between;
 }
@@ -94,8 +94,8 @@ div.search-container {
 #search {
   background: url('../img/search.png') no-repeat;
   border: none;
-  width: var(--header-buttons-size);
-  height: var(--header-buttons-size);
+  width: var(--icon-buttons-size);
+  height: var(--icon-buttons-size);
 }
 
 input#search-field {
@@ -117,8 +117,8 @@ div.corner-functions {
 #notifications {
   background: url('../img/notifications.png') no-repeat;  
   border: none;
-  width: var(--header-buttons-size);
-  height: var(--header-buttons-size);
+  width: var(--icon-buttons-size);
+  height: var(--icon-buttons-size);
 
 }
 
@@ -132,7 +132,7 @@ div.greeting-container {
 }
 
 img#user-pic-big {
-  width: 10%;
+  width: 5rem;
 }
 
 div.greeting {
@@ -170,6 +170,87 @@ button.lower-buttons {
 
 /* main-content */
 .main-content {
+  background-color: #e3e5e8;
+  padding: 1rem 2rem 0 1rem;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.user-projects {
+  padding: 1rem;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+div.project {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  border-left: .5rem solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projects-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.announcements {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.trendings {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+
+span.main-content-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+span.project-title {
+  font-weight: 600;
+}
+
+div.project-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: .75rem;
+}
+
+button.star {
+  background: url('../img/star.png') no-repeat;  
+  border: none;
+  width: var(--icon-buttons-size);
+  height: var(--icon-buttons-size);
+}
+
+button.watch {
+  background: url('../img/watch.png') no-repeat;  
+  border: none;
+  width: var(--icon-buttons-size);
+  height: var(--icon-buttons-size);
+}
+
+button.fork {
+  background: url('../img/fork.png') no-repeat;  
+  border: none;
+  width: var(--icon-buttons-size);
+  height: var(--icon-buttons-size);
+}
+
+.main-content img {
+  width: 32px;
 }
