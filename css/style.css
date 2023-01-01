@@ -17,11 +17,6 @@ body {
   grid-template-rows: min(1fr, 17%) min(5fr, 83%);
 }
 
-/* test -- delete later */
-.main-content > img {
-  width: 50px;
-}
-
 .sidebar {
   min-width: min-content;
   padding: .75rem;
